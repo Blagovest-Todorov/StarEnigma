@@ -22,11 +22,10 @@ namespace StarEnigma
 
             for (int i = 0; i < n; i++)  //iterate line 
             {
-                string message = Console.ReadLine();
-                int countLetters;
+                string message = Console.ReadLine();                
 
                 MatchCollection matches = regex.Matches(message);
-                countLetters = matches.Count;
+                int countLetters = matches.Count;
 
                 string changedMessage = DecreaseLettersMessage(countLetters, message);                         
 
@@ -70,7 +69,7 @@ namespace StarEnigma
                 Console.WriteLine($"-> {planet}");
             }
         }
-
+        
         private static void PrintAttackedPlanets(List<string> attackedPlanets)
         {
             List <string> sortedAttackedPlanets = attackedPlanets
